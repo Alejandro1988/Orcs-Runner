@@ -19,6 +19,8 @@
       <sprite>sprites\titulo</sprite>
       <sprite>sprites\menu_opciones</sprite>
       <sprite>sprites\Cartel_pausa</sprite>
+      <sprite>sprites\barraLlena</sprite>
+      <sprite>sprites\barraVacia</sprite>
     </sprites>
     <sprites name="Nivel1">
       <sprites name="esenografia">
@@ -105,6 +107,7 @@
       <objects name="pausa">
         <object>objects\o_cartel_pausa</object>
       </objects>
+      <object>objects\volumen</object>
     </objects>
     <objects name="Nivel">
       <objects name="esenografia">
