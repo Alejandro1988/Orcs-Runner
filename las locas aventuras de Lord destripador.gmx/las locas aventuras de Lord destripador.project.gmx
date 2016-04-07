@@ -107,7 +107,8 @@
       <objects name="pausa">
         <object>objects\o_cartel_pausa</object>
       </objects>
-      <object>objects\volumen</object>
+      <object>objects\o_volumen_barra</object>
+      <object>objects\o_volumen</object>
     </objects>
     <objects name="Nivel">
       <objects name="esenografia">
@@ -141,6 +142,7 @@
     <object>objects\personaje_viejo</object>
     <object>objects\o_prueba</object>
     <object>objects\o_espada</object>
+    <object>objects\settings</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">
