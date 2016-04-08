@@ -85,6 +85,7 @@
     <font>fonts\Orca</font>
   </fonts>
   <objects name="objects">
+    <object>objects\settings</object>
     <objects name="menu">
       <objects name="principal">
         <object>objects\o_menu_principal</object>
@@ -102,23 +103,24 @@
         <object>objects\o_pan_comp</object>
         <object>objects\o_sonido</object>
         <object>objects\o_creditos</object>
+        <object>objects\o_volumen_barra</object>
+        <object>objects\o_volumen</object>
       </objects>
       <object>objects\o_volver</object>
       <objects name="pausa">
         <object>objects\o_cartel_pausa</object>
       </objects>
-      <object>objects\o_volumen_barra</object>
-      <object>objects\o_volumen</object>
     </objects>
     <objects name="Nivel">
       <objects name="esenografia">
         <object>objects\o_crear_nube</object>
         <object>objects\o_nube</object>
-        <object>objects\o_horizonte_centro</object>
+        <object>objects\o_crea_escenografia_centro</object>
         <object>objects\o_roca</object>
         <object>objects\o_mancha</object>
         <object>objects\o_roca_peque</object>
         <object>objects\o_pozo</object>
+        <object>objects\o_horizonte_centro</object>
         <object>objects\o_caminoizq</object>
         <object>objects\o_caminoder</object>
         <object>objects\o_pared</object>
@@ -128,6 +130,7 @@
         <object>objects\o_pasto</object>
       </objects>
       <objects name="jugador">
+        <object>objects\o_espada</object>
         <object>objects\o_personaje</object>
       </objects>
       <objects name="Botones y iconos">
@@ -141,8 +144,6 @@
     <object>objects\o_logo</object>
     <object>objects\personaje_viejo</object>
     <object>objects\o_prueba</object>
-    <object>objects\o_espada</object>
-    <object>objects\settings</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">

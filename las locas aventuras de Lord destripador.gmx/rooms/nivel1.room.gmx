@@ -80,6 +80,7 @@
     <instance objName="o_crear_esenografia" x="116" y="131" name="inst_B07CCBF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_personaje" x="509" y="599" name="inst_36AF8755" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_crear_nube" x="595" y="41" name="inst_8E0131E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_espada" x="533" y="550" name="inst_2EBD915D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

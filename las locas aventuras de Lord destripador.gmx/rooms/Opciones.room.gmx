@@ -54,7 +54,7 @@
     <instance objName="o_menu_opciones" x="475" y="769" name="inst_55D5875E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_pan_comp" x="494" y="285" name="inst_853D0FA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_volver" x="458" y="597" name="inst_7BFF280C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_sonido" x="490" y="394" name="inst_7DEA16FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_sonido" x="489" y="395" name="inst_7DEA16FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_creditos" x="478" y="484" name="inst_152107C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

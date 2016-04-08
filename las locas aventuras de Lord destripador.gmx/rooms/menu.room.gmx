@@ -57,8 +57,6 @@
     <instance objName="B_nuevo" x="256" y="283" name="inst_7ABABACA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_opciones" x="237" y="480" name="inst_7EEB922D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_titulo" x="351" y="2" name="inst_24F790BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_volumen_barra" x="697" y="281" name="inst_956A9F72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_volumen" x="768" y="339" name="inst_3F40CEA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="settings" x="549" y="268" name="inst_42F139BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
