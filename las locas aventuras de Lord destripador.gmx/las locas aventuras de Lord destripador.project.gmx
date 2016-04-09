@@ -24,11 +24,9 @@
     </sprites>
     <sprites name="Nivel1">
       <sprites name="esenografia">
-        <sprite>sprites\pozo</sprite>
         <sprite>sprites\cam_ozq</sprite>
         <sprite>sprites\cam_der</sprite>
         <sprite>sprites\nube</sprite>
-        <sprite>sprites\roca</sprite>
         <sprite>sprites\muro_jugador</sprite>
         <sprite>sprites\horizonte</sprite>
         <sprite>sprites\Horizonte_Izquierdo</sprite>
@@ -37,6 +35,8 @@
         <sprite>sprites\pasto</sprite>
         <sprite>sprites\mancha</sprite>
         <sprite>sprites\roca_peque</sprite>
+        <sprite>sprites\s_cen</sprite>
+        <sprite>sprites\s_dmg_cen</sprite>
       </sprites>
       <sprites name="jugador">
         <sprite>sprites\p_derecha</sprite>
@@ -113,13 +113,10 @@
     </objects>
     <objects name="Nivel">
       <objects name="esenografia">
+        <object>objects\o_cen</object>
+        <object>objects\o_cen_dmg</object>
         <object>objects\o_crear_nube</object>
         <object>objects\o_nube</object>
-        <object>objects\o_crea_escenografia_centro</object>
-        <object>objects\o_roca</object>
-        <object>objects\o_mancha</object>
-        <object>objects\o_roca_peque</object>
-        <object>objects\o_pozo</object>
         <object>objects\o_horizonte_centro</object>
         <object>objects\o_caminoizq</object>
         <object>objects\o_caminoder</object>

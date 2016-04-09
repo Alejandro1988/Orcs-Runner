@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var global.nombre="lord Destripador";
-var global.volumen=1;
+            <string>global.nombre="lord Destripador";
+global.volumen=1;
+global.dificultad=390;
 </string>
           </argument>
         </arguments>

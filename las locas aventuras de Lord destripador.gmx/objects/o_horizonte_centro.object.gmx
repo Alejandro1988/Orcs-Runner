@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.dificultad=100;
-rocpeq =0;
+            <string>rocpeq =0;
 manch = 0;
 roc = 0;
 poz = 0;
@@ -89,7 +88,7 @@ else{
 
         }
     else{
-        if (global.dificultad&lt;400){ //dificultad 3 idem 2 pero con pozos y ademas en menos tiempo
+        if (global.dificultad&gt;350){ //dificultad 3 idem 2 pero con pozos y ademas en menos tiempo
             alarm[1]=30;
             i=random(120);
             }
@@ -118,13 +117,13 @@ poz= poz -1;
 
         if (i&gt;=0 and i&lt;15 and rocpeq =0)
         {
-        instance_create(random(280)+360,y,o_roca_peque);
+        instance_create(random(280)+360,y,o_cen);
         rocpeq = 2;    //creo una variable para que no se generen rocas muy seguido
         }
 
         if (i&gt;=15 and i&lt;30 and manch = 0)
         {
-        instance_create(random(280)+360,y,o_mancha);
+        instance_create(random(280)+360,y,o_cen);
         manch = 2;
         }
 
@@ -135,7 +134,8 @@ poz= poz -1;
         
         if (i&gt;=65 and i&lt;80 and roc = 0)
         {
-        instance_create(random(280)+360,y,o_roca);
+        instance_create(random(280)+360,y,o_cen_dmg);
+        
         roc = 2;    
         }
 /////////////////dificultad 2///////////
@@ -146,7 +146,7 @@ poz= poz -1;
 /////////////////dificultad 3///////////
         if (i&gt;=100 and i&lt;=120 and roc = 0)
         {
-        instance_create(random(280)+360,y,o_pozo);
+        instance_create(random(280)+360,y,o_cen_dmg);
         poz = 2;
         }
 </string>
