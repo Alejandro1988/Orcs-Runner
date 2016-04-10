@@ -20,7 +20,6 @@
   <width>150</width>
   <height>71</height>
   <frames>
-    <frame index="0">images\s_dmg_cen_0.png</frame>
-    <frame index="1">images\s_dmg_cen_1.png</frame>
+    <frame index="0">images\s_cen_dmg_pozo_0.png</frame>
   </frames>
 </sprite>

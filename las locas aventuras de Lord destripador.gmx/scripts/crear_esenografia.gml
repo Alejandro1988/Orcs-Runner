@@ -13,7 +13,7 @@ if ((argument0>=140 && argument0<300) || (argument0>=650 && argument0<870)){
     instance_create(argument0,145,o_arbol_inicio)
         }
     else{
-        instance_create(argument0,145,o_pasto)
+        instance_create(argument0,145,o_later)
         }
     }
 else{
@@ -22,7 +22,7 @@ else{
         instance_create(argument0,175,o_arbol_inicio)
         }
     else{
-        instance_create(argument0,175,o_pasto)
+        instance_create(argument0,175,o_later)
         }
     }
     else{
@@ -31,7 +31,7 @@ else{
                 instance_create(argument0,155,o_arbol_inicio)
             }
             else{
-                instance_create(argument0,155,o_pasto)
+                instance_create(argument0,155,o_later)
             }
         }
         }

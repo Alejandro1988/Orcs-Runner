@@ -28,15 +28,13 @@
         <sprite>sprites\cam_der</sprite>
         <sprite>sprites\nube</sprite>
         <sprite>sprites\muro_jugador</sprite>
-        <sprite>sprites\horizonte</sprite>
         <sprite>sprites\Horizonte_Izquierdo</sprite>
         <sprite>sprites\Horizonte_Derecho</sprite>
         <sprite>sprites\arbol1</sprite>
         <sprite>sprites\pasto</sprite>
-        <sprite>sprites\mancha</sprite>
-        <sprite>sprites\roca_peque</sprite>
         <sprite>sprites\s_cen</sprite>
-        <sprite>sprites\s_dmg_cen</sprite>
+        <sprite>sprites\s_cen_dmg</sprite>
+        <sprite>sprites\s_cen_dmg_pozo</sprite>
       </sprites>
       <sprites name="jugador">
         <sprite>sprites\p_derecha</sprite>
@@ -51,14 +49,8 @@
       <sprite>sprites\Orco</sprite>
       <sprite>sprites\orco_subiendo_transparente</sprite>
     </sprites>
-    <sprite>sprites\prueba</sprite>
-    <sprite>sprites\prueba_derecha</sprite>
-    <sprite>sprites\prueba_izquierda</sprite>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
-    <sprite>sprites\logo</sprite>
-    <sprite>sprites\orco_subiendo_transparente2</sprite>
-    <sprite>sprites\hongo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\f_pausa</background>
@@ -80,6 +72,7 @@
     <script>scripts\perida_vida.gml</script>
     <script>scripts\crear_orco.gml</script>
     <script>scripts\crear_esenografia.gml</script>
+    <script>scripts\comportamiento_camino.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Orca</font>
@@ -114,17 +107,18 @@
     <objects name="Nivel">
       <objects name="esenografia">
         <object>objects\o_cen</object>
+        <object>objects\o_creador</object>
         <object>objects\o_cen_dmg</object>
+        <object>objects\o_cen_dmg_pozo</object>
         <object>objects\o_crear_nube</object>
         <object>objects\o_nube</object>
-        <object>objects\o_horizonte_centro</object>
         <object>objects\o_caminoizq</object>
         <object>objects\o_caminoder</object>
         <object>objects\o_pared</object>
         <object>objects\o_crear_esenografia</object>
         <object>objects\o_arbol_inicio</object>
         <object>objects\o_arbol1</object>
-        <object>objects\o_pasto</object>
+        <object>objects\o_later</object>
       </objects>
       <objects name="jugador">
         <object>objects\o_espada</object>
@@ -140,7 +134,6 @@
     </objects>
     <object>objects\o_logo</object>
     <object>objects\personaje_viejo</object>
-    <object>objects\o_prueba</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">
