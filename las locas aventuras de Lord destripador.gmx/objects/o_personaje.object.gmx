@@ -5,63 +5,9 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000010000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>personaje</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -79,72 +25,70 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x-32,y,o_pared) //si hay pared a izquierda solo puede mover a derecha
-    {
-    o_personaje.hspeed=0;
-    if not (o_personaje.sprite_index=personaje)
-        {
+            <string>if place_meeting(x-32,y,o_pared){ //si hay pared a izquierda solo puede mover a derecha
+    hspeed=0;
+    if not (o_personaje.sprite_index=personaje)        {
         o_personaje.sprite_index=personaje;
-        }
-    if (mouse_x&gt;o_personaje.x+10) //habilita mov a derecha
-        {
-        o_personaje.hspeed=10;
-        if not(o_personaje.sprite_index=p_derecha)
-            {
-            o_personaje.sprite_index=p_derecha;
-            }
-       }    
     }
-else
-    {
-    if place_meeting(x+32,y,o_pared) //si hay pared a derecha solo puede mover a izquierda
-        {
-        o_personaje.hspeed=0;
-        if not (o_personaje.sprite_index=personaje)
-            {
-            o_personaje.sprite_index=personaje;
-            }   
-        if (mouse_x&lt;o_personaje.x-10)
-            {
-            o_personaje.hspeed=-10;
-            if not(o_personaje.sprite_index=p_izquierda)
-            {
-                o_personaje.sprite_index=p_izquierda;
-            }
-            }
-        }
-    else   //si no hay coliciones libre movimiento
-        {
-        if (mouse_x&lt;o_personaje.x+10 and mouse_x&gt;o_personaje.x-10) 
-            {
-            o_personaje.hspeed=0;
-            if not (o_personaje.sprite_index=personaje)
-                {
-                o_personaje.sprite_index=personaje;
-                }
-            }
-        else
-            {
-            if (mouse_x&gt;o_personaje.x+10)
-                {
-                o_personaje.hspeed=10;
-                if not(o_personaje.sprite_index=p_derecha)
-                    {
-                    o_personaje.sprite_index=p_derecha;
-                    }
-                }
-            if (mouse_x&lt;o_personaje.x-10)
-                {
-                o_personaje.hspeed=-10;
-                 if not(o_personaje.sprite_index=p_izquierda)
-                    {
-                    o_personaje.sprite_index=p_izquierda;
-                    }
-                }
-            }
-
+    if (mouse_x&gt;o_personaje.x+10){ //habilita mov a derecha
+        hspeed=10;
+        if not(o_personaje.sprite_index=p_derecha){
+            o_personaje.sprite_index=p_derecha;
         }
     }    
+}else{
+    if place_meeting(x+32,y,o_pared){ //si hay pared a derecha solo puede mover a izquierda
+        o_personaje.hspeed=0;
+        if not (o_personaje.sprite_index=personaje){
+            o_personaje.sprite_index=personaje;
+        }   
+        if (mouse_x&lt;o_personaje.x-10){
+            hspeed=-10;
+            if not(o_personaje.sprite_index=p_izquierda){
+                o_personaje.sprite_index=p_izquierda;
+            }
+        }
+    }else{   //si no hay coliciones libre movimiento
+        if (mouse_x&lt;o_personaje.x+10 and mouse_x&gt;o_personaje.x-10){
+            hspeed=0;
+            if not (o_personaje.sprite_index=personaje){
+                o_personaje.sprite_index=personaje;
+            }
+        }else{
+            if (mouse_x&gt;o_personaje.x+10){
+                hspeed=10;
+                if not(o_personaje.sprite_index=p_derecha){
+                    o_personaje.sprite_index=p_derecha;
+                }
+            }
+            if (mouse_x&lt;o_personaje.x-10){
+                hspeed=-10;
+                if not(o_personaje.sprite_index=p_izquierda){
+                    o_personaje.sprite_index=p_izquierda;
+                }
+            }
+        }
+
+    }
+}
+/*
+if (mouse_x&lt;o_espada.x+5 and mouse_x&gt;o_espada.x-5)
+{
+    o_espada.hspeed=0;
+}
+else
+{
+    if (mouse_x&gt;o_espada.x+5)
+    {
+        o_espada.hspeed=10;
+    }
+    if (mouse_x&lt;o_espada.x-5)
+    {
+        o_espada.hspeed=-10;
+    }
+}
+
+*/    
    
    
    

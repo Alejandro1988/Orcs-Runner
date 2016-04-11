@@ -27,7 +27,13 @@
             <kind>1</kind>
             <string>global.nombre="lord Destripador";
 global.volumen=1;
+/*
+estas varibles se setean cuando inicia el juego
+
 global.dificultad=390;
+global.score=0;
+global.lives=10;
+*/
 </string>
           </argument>
         </arguments>

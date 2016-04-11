@@ -53,8 +53,8 @@
        room_goto(nivel1)
     }else if (!paused){
         paused=true;
-        tempbackground = background_create_from_screen (0,0,1024,768,false,false);
-        background_assign(f_aux2, tempbackground);
+       // tempbackground = sprite_create_from_screen (0,0,1024,768,false,false);
+       // background_assign(f_aux2, tempbackground);
         background_assign(f_aux1, f_pausa);
         background_assign(f_pausa, f_aux2);
         room_goto(pause);

@@ -28,8 +28,7 @@
             <string>o_menu_principal.alarm[0]=5;
 o_menu_principal.alarm[1]=50;
 audio_play_sound(sound3,0,0)
-global.score=0;
-global.lives=10;
+iniciar_variables();
 </string>
           </argument>
         </arguments>

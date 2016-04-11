@@ -73,6 +73,7 @@
     <script>scripts\crear_orco.gml</script>
     <script>scripts\crear_esenografia.gml</script>
     <script>scripts\comportamiento_camino.gml</script>
+    <script>scripts\iniciar_variables.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Orca</font>
