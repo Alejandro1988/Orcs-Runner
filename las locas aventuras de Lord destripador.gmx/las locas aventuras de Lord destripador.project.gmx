@@ -134,6 +134,7 @@
     </objects>
     <object>objects\o_logo</object>
     <object>objects\personaje_viejo</object>
+    <object>objects\o_nombre</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">

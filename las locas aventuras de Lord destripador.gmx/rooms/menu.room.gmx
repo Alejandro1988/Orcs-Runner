@@ -58,6 +58,7 @@
     <instance objName="o_opciones" x="237" y="480" name="inst_7EEB922D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_titulo" x="351" y="2" name="inst_24F790BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="settings" x="549" y="268" name="inst_42F139BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_nombre" x="729" y="225" name="inst_BC782A01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
