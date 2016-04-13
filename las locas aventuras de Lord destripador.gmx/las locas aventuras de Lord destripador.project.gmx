@@ -107,19 +107,17 @@
     </objects>
     <objects name="Nivel">
       <objects name="esenografia">
+        <object>objects\o_crear_esenografia</object>
         <object>objects\o_cen</object>
-        <object>objects\o_creador</object>
         <object>objects\o_cen_dmg</object>
         <object>objects\o_cen_dmg_pozo</object>
-        <object>objects\o_crear_nube</object>
         <object>objects\o_nube</object>
-        <object>objects\o_caminoizq</object>
-        <object>objects\o_caminoder</object>
-        <object>objects\o_pared</object>
-        <object>objects\o_crear_esenografia</object>
         <object>objects\o_arbol_inicio</object>
         <object>objects\o_arbol1</object>
         <object>objects\o_later</object>
+        <object>objects\o_pared</object>
+        <object>objects\o_caminoizq</object>
+        <object>objects\o_caminoder</object>
       </objects>
       <objects name="jugador">
         <object>objects\o_espada</object>
@@ -132,6 +130,7 @@
       </objects>
       <object>objects\o_orco</object>
       <object>objects\o_orco_inicio</object>
+      <object>objects\o_escena</object>
     </objects>
     <object>objects\o_logo</object>
     <object>objects\personaje_viejo</object>

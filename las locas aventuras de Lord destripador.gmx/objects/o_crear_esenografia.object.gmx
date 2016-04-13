@@ -5,31 +5,148 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>30</string>
+            <kind>1</kind>
+            <string>alarm[0]=1;//arboles y pasto lateral
+alarm[1]=1;//nubes
+alarm[2]=1;//orcos y piedras
+//varibales locales
+adorno =0;
+roca = 0;
+pozo = 0;
+
+</string>
           </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
           <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>/*
+en la dificultad inicial solo creo orco y piedras
+dificultad 2 mas orcos y misma cant de piedras en menos tiempo
+dificultad 3 idem 2 pero con pozos y ademas en menos tiempo
+*/
+
+global.dificultad=global.dificultad+1
+if (global.dificultad&lt;50){
+    alarm[2]=50;
+    i=random(81);
+}else{
+    if (global.dificultad&lt;200){
+        alarm[2]=40;
+        i=random(101);
+    }else{
+        if (global.dificultad&gt;350){
+            alarm[2]=30;
+            i=random(121);
+        }
+    }
+}
+
+//crea objetos al azar con i, la cual es determinada segun la dificultad
+//0-35% adornos (roca pequeña y manchas)
+//35-60% orcos
+//60-80% piedras
+//80-100% orcos
+//100-120% pozos
+
+//creo una variable para que no se generen rocas muy seguido
+if adorno &gt; 0 {
+    adorno--;
+}
+if roca &gt; 0 {
+    roca--;
+}
+if pozo &gt; 0 {
+    pozo--;
+}
+
+if (i&gt;=0 and i&lt;35 and adorno == 0){
+    instance_create(random(280)+360,y,o_cen);
+    adorno = 2;    
+}
+if (i&gt;=40 and i&lt;60){
+    crear_orco(random(280)+360);  
+}
+if (i&gt;=60 and i&lt;80 and roca = 0){
+    instance_create(random(280)+360,y,o_cen_dmg);
+    roc = 2;    
+}
+/////////////////dificultad 2///////////
+if (i&gt;=80 and i&lt;100){
+    crear_orco(random(280)+360);  
+}
+/////////////////dificultad 3///////////
+if (i&gt;=100 and i&lt;=120 and pozo = 0){
+    instance_create(random(280)+360,y,o_cen_dmg_pozo);
+    poz = 3;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x:=irandom(2);
+if x=0 {
+    instance_create( 0 ,50, o_nube);
+    }
+else{
+    instance_create(1024, 50, o_nube);
+    }
+alarm[1]:=120;
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -65,32 +182,9 @@ switch (x){
     case 3:
         crear_esenografia(random_range(665,1024),1);
 }
+alarm[0]=30;
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>30</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>

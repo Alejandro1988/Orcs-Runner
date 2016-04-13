@@ -29,6 +29,7 @@
 o_menu_principal.alarm[1]=50;
 audio_play_sound(sound3,0,0)
 iniciar_variables();
+
 </string>
           </argument>
         </arguments>
