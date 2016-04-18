@@ -56,7 +56,6 @@
             <string>image_xscale =image_xscale*0.5;
 image_yscale =image_yscale*0.5;
 other.tam=0;
-choque = false;
 </string>
           </argument>
         </arguments>
@@ -77,7 +76,7 @@ choque = false;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>2</string>
+            <string>2.5</string>
           </argument>
         </arguments>
       </action>
@@ -122,30 +121,6 @@ choque = false;
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hspeed:=0;
-choque = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -164,10 +139,10 @@ choque = false;
           <argument>
             <kind>1</kind>
             <string>if (other.tam&lt;90){
-image_xscale =image_xscale*1.01;
-image_yscale =image_yscale*1.01;
-vspeed=vspeed+0.01;
-other.tam=other.tam+1;
+    image_xscale =image_xscale*1.01;
+    image_yscale =image_yscale*1.01;
+    vspeed=vspeed+0.01;
+    other.tam=other.tam+1;
 }
 </string>
           </argument>
@@ -190,39 +165,28 @@ other.tam=other.tam+1;
           <argument>
             <kind>1</kind>
             <string>//movimiento
-if (choque = false) {
-    if (o_personaje.x&lt;o_orco.x+5 and o_personaje.x&gt;o_orco.x-5)    {
-        if (place_meeting(o_orco.x,o_orco.y+5,o_cen_dmg)){
-            o_orco.hspeed=o_orco.hspeed+3;
-        }
-        else
-        {    
+if ( (o_personaje.x &lt; o_orco.x+5) and (o_personaje.x &gt; o_orco.x-5) ){
+    if (place_meeting(o_orco.x, o_orco.y+5, o_cen_dmg)){
+        o_orco.hspeed=o_orco.hspeed+2;
+    }else{    
         o_orco.hspeed=0;
+    }
+}else{
+    if (o_personaje.x &gt; o_orco.x+5){
+        if (place_meeting(o_orco.x, o_orco.y+5, o_cen_dmg)){
+            o_orco.hspeed=o_orco.hspeed+2;
+        }else{
+            o_orco.hspeed=2;
         }
+    }
+    if (o_personaje.x &lt; o_orco.x-5){
+        if (place_meeting(o_orco.x, o_orco.y+5 ,o_cen_dmg)){
+            o_orco.hspeed=o_orco.hspeed-2;
+        }else{
+            o_orco.hspeed=-2;
         }
-    else
-        {
-        if (o_personaje.x&gt;o_orco.x+5)
-            {
-                if (place_meeting(o_orco.x,o_orco.y+5,o_cen_dmg)){
-                    o_orco.hspeed=o_orco.hspeed+3;
-                }
-                else{
-                    o_orco.hspeed=3;
-                }
-            }
-        if (o_personaje.x&lt;o_orco.x-5)
-            {
-                if (place_meeting(o_orco.x,o_orco.y+5,o_cen_dmg)){
-                    o_orco.hspeed=o_orco.hspeed-3;
-                }
-                else{
-                    o_orco.hspeed=-3;
-                }
-            }
-        }
-}
-   
+    }
+}  
 </string>
           </argument>
         </arguments>

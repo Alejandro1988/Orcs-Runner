@@ -51,6 +51,7 @@
     </sprites>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
+    <sprite>sprites\sprite31</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\f_pausa</background>
