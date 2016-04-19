@@ -55,28 +55,9 @@
             <kind>1</kind>
             <string>image_xscale =image_xscale*0.5;
 image_yscale =image_yscale*0.5;
-other.tam=0;
+vspeed=0.5;
+tam=0;
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>104</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_vspeed</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>2.5</string>
           </argument>
         </arguments>
       </action>
@@ -138,34 +119,20 @@ other.tam=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (other.tam&lt;90){
-    image_xscale =image_xscale*1.01;
-    image_yscale =image_yscale*1.01;
-    vspeed=vspeed+0.01;
-    other.tam=other.tam+1;
+            <string>//crecimiento
+if (tam&lt;50){
+    image_xscale =image_xscale*1.03;
+    image_yscale =image_yscale*1.03;
+    tam=tam+1;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//movimiento
-if ( (o_personaje.x &lt; o_orco.x+5) and (o_personaje.x &gt; o_orco.x-5) ){
+
+//aceleracion
+if (vspeed &lt; 6){
+    vspeed=vspeed+0.5;
+}
+
+//movimiento
+/*if ( (o_personaje.x &lt; o_orco.x+5) and (o_personaje.x &gt; o_orco.x-5) ){
     if (place_meeting(o_orco.x, o_orco.y+5, o_cen_dmg)){
         o_orco.hspeed=o_orco.hspeed+2;
     }else{    
@@ -186,7 +153,7 @@ if ( (o_personaje.x &lt; o_orco.x+5) and (o_personaje.x &gt; o_orco.x-5) ){
             o_orco.hspeed=-2;
         }
     }
-}  
+} */ 
 </string>
           </argument>
         </arguments>

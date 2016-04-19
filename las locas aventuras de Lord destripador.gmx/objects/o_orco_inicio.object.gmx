@@ -76,7 +76,7 @@ image_alpha=0.5;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>10</string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -100,7 +100,7 @@ image_alpha=0.5;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>400</string>
+            <string>120</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -196,7 +196,7 @@ image_yscale =image_yscale*1.1;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>14</string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>4</kind>

@@ -17,6 +17,7 @@
       <sprite>sprites\tercer_boton</sprite>
       <sprite>sprites\cuarto_boton</sprite>
       <sprite>sprites\titulo</sprite>
+      <sprite>sprites\s_nombre</sprite>
       <sprite>sprites\menu_opciones</sprite>
       <sprite>sprites\Cartel_pausa</sprite>
       <sprite>sprites\barraLlena</sprite>
@@ -51,7 +52,6 @@
     </sprites>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
-    <sprite>sprites\sprite31</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\f_pausa</background>
@@ -89,6 +89,7 @@
         <object>objects\o_opciones</object>
         <object>objects\B_salir</object>
         <object>objects\o_titulo</object>
+        <object>objects\o_nombre</object>
       </objects>
       <objects name="puntuaciones">
         <object>objects\tabla_puntajes</object>
@@ -134,8 +135,6 @@
       <object>objects\o_escena</object>
     </objects>
     <object>objects\o_logo</object>
-    <object>objects\personaje_viejo</object>
-    <object>objects\o_nombre</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">
