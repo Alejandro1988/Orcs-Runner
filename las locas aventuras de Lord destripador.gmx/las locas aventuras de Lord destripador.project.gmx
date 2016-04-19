@@ -75,6 +75,15 @@
     <script>scripts\crear_esenografia.gml</script>
     <script>scripts\comportamiento_camino.gml</script>
     <script>scripts\iniciar_variables.gml</script>
+    <script>scripts\scr_viejoStep_o_personaje.gml</script>
+    <scripts name="scripts del pj">
+      <scripts name="acciones">
+        <script>scripts\scr_moviendo.gml</script>
+        <script>scripts\scr_atacando.gml</script>
+      </scripts>
+      <script>scripts\scr_esperandoAccion.gml</script>
+      <script>scripts\scr_checkAccion.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Orca</font>
