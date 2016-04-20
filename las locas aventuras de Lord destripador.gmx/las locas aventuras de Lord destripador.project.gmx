@@ -71,7 +71,7 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\perida_vida.gml</script>
-    <script>scripts\crear_orco.gml</script>
+    <script>scripts\crear_obj_camino.gml</script>
     <script>scripts\crear_esenografia.gml</script>
     <script>scripts\comportamiento_camino.gml</script>
     <script>scripts\iniciar_variables.gml</script>

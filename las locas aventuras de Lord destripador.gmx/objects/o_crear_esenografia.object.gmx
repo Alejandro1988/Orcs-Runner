@@ -99,20 +99,18 @@ if (i&gt;=0 and i&lt;35 and adorno == 0){
     instance_create(random(280)+360,y,o_cen);
     adorno = 2;    
 }
-if (i&gt;=40 and i&lt;60){
-    crear_orco(random(280)+360);  
+if ( (i&gt;=40 and i&lt;60) or (i&gt;=80 and i&lt;100) ){
+    crear_obj_camino(irandom(2),0);  
 }
 if (i&gt;=60 and i&lt;80 and roca = 0){
-    instance_create(random(280)+360,y,o_cen_dmg);
+    crear_obj_camino(irandom(2),1); 
+    //instance_create(random(280)+360,y,o_cen_dmg);
     roc = 2;    
-}
-/////////////////dificultad 2///////////
-if (i&gt;=80 and i&lt;100){
-    crear_orco(random(280)+360);  
 }
 /////////////////dificultad 3///////////
 if (i&gt;=100 and i&lt;=120 and pozo = 0){
-    instance_create(random(280)+360,y,o_cen_dmg_pozo);
+    crear_obj_camino(irandom(2),2); 
+    //instance_create(random(280)+360,y,o_cen_dmg_pozo);
     poz = 3;
 }
 </string>

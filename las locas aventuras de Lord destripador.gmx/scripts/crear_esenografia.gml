@@ -10,29 +10,24 @@
 
 if ((argument0>=140 && argument0<300) || (argument0>=650 && argument0<870)){
     if (argument1==0){
-    instance_create(argument0,145,o_arbol_inicio)
-        }
-    else{
+        instance_create(argument0,145,o_arbol_inicio)
+    }else{
         instance_create(argument0,145,o_later)
-        }
     }
-else{
+}else{
     if(argument0>=0 && argument0<140) || (argument0>=920 && argument0<1024){
-     if (argument1==0){
-        instance_create(argument0,175,o_arbol_inicio)
+        if (argument1==0){
+            instance_create(argument0,175,o_arbol_inicio)
+        }else{
+            instance_create(argument0,175,o_later)
         }
-    else{
-        instance_create(argument0,175,o_later)
-        }
-    }
-    else{
+    }else{
         if(argument0>=870 && argument0<920){
             if (argument1==0){
                 instance_create(argument0,155,o_arbol_inicio)
-            }
-            else{
+            }else{
                 instance_create(argument0,155,o_later)
             }
         }
-        }
     }
+}
