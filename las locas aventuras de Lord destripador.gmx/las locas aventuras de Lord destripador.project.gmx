@@ -25,10 +25,7 @@
     </sprites>
     <sprites name="Nivel1">
       <sprites name="esenografia">
-        <sprite>sprites\cam_ozq</sprite>
-        <sprite>sprites\cam_der</sprite>
         <sprite>sprites\nube</sprite>
-        <sprite>sprites\muro_jugador</sprite>
         <sprite>sprites\Horizonte_Izquierdo</sprite>
         <sprite>sprites\Horizonte_Derecho</sprite>
         <sprite>sprites\arbol1</sprite>
@@ -70,10 +67,12 @@
     <path>paths\Borde_derecho</path>
   </paths>
   <scripts name="scripts">
-    <script>scripts\perida_vida.gml</script>
-    <script>scripts\crear_obj_camino.gml</script>
-    <script>scripts\crear_esenografia.gml</script>
-    <script>scripts\comportamiento_camino.gml</script>
+    <scripts name="Obj_camino">
+      <script>scripts\crear_esenografia.gml</script>
+      <script>scripts\crear_obj_camino.gml</script>
+      <script>scripts\escalar.gml</script>
+      <script>scripts\comportamiento_camino.gml</script>
+    </scripts>
     <script>scripts\iniciar_variables.gml</script>
     <script>scripts\scr_viejoStep_o_personaje.gml</script>
     <scripts name="scripts del pj">
@@ -83,6 +82,7 @@
       </scripts>
       <script>scripts\scr_esperandoAccion.gml</script>
       <script>scripts\scr_checkAccion.gml</script>
+      <script>scripts\perida_vida.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -126,9 +126,6 @@
         <object>objects\o_arbol_inicio</object>
         <object>objects\o_arbol1</object>
         <object>objects\o_later</object>
-        <object>objects\o_pared</object>
-        <object>objects\o_caminoizq</object>
-        <object>objects\o_caminoder</object>
       </objects>
       <objects name="jugador">
         <object>objects\o_espada</object>

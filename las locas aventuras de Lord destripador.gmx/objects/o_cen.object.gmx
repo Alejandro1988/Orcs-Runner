@@ -27,8 +27,10 @@
             <kind>1</kind>
             <string>image_index=random(2);
 image_speed=0;
+escalar(0.25);
 comportamiento_camino();
-
+alarm[0]=10;
+alarm[11]=750;
 </string>
           </argument>
         </arguments>

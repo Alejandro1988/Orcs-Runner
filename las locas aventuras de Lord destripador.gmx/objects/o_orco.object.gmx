@@ -53,8 +53,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale =image_xscale*0.5;
-image_yscale =image_yscale*0.5;
+            <string>escalar(0.5);
+comportamiento_camino();
 vspeed=0.5;
 tam=0;
 </string>
@@ -131,29 +131,7 @@ if (vspeed &lt; 6){
     vspeed=vspeed+0.5;
 }
 
-//movimiento
-/*if ( (o_personaje.x &lt; o_orco.x+5) and (o_personaje.x &gt; o_orco.x-5) ){
-    if (place_meeting(o_orco.x, o_orco.y+5, o_cen_dmg)){
-        o_orco.hspeed=o_orco.hspeed+2;
-    }else{    
-        o_orco.hspeed=0;
-    }
-}else{
-    if (o_personaje.x &gt; o_orco.x+5){
-        if (place_meeting(o_orco.x, o_orco.y+5, o_cen_dmg)){
-            o_orco.hspeed=o_orco.hspeed+2;
-        }else{
-            o_orco.hspeed=2;
-        }
-    }
-    if (o_personaje.x &lt; o_orco.x-5){
-        if (place_meeting(o_orco.x, o_orco.y+5 ,o_cen_dmg)){
-            o_orco.hspeed=o_orco.hspeed-2;
-        }else{
-            o_orco.hspeed=-2;
-        }
-    }
-} */ 
+
 </string>
           </argument>
         </arguments>
