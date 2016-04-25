@@ -45,7 +45,6 @@
         <sprite>sprites\pausa</sprite>
       </sprites>
       <sprite>sprites\Orco</sprite>
-      <sprite>sprites\orco_subiendo_transparente</sprite>
     </sprites>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
@@ -119,9 +118,12 @@
     <objects name="Nivel">
       <objects name="esenografia">
         <object>objects\o_crear_esenografia</object>
+        <object>objects\o_escena</object>
         <object>objects\o_cen</object>
         <object>objects\o_cen_dmg</object>
         <object>objects\o_cen_dmg_pozo</object>
+        <object>objects\o_orco_inicio</object>
+        <object>objects\o_orco</object>
         <object>objects\o_nube</object>
         <object>objects\o_arbol_inicio</object>
         <object>objects\o_arbol1</object>
@@ -136,9 +138,6 @@
         <object>objects\Puntaje</object>
         <object>objects\o_pausa</object>
       </objects>
-      <object>objects\o_orco</object>
-      <object>objects\o_orco_inicio</object>
-      <object>objects\o_escena</object>
     </objects>
     <object>objects\o_logo</object>
   </objects>

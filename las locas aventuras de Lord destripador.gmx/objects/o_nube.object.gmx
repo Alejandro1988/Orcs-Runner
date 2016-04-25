@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>o_escena</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -31,62 +31,47 @@
 else{
     hspeed:=-1*random_range(0.1,2);
     }
-image_xscale =image_xscale*random_range(0.3,1);
-image_yscale =image_yscale*random_range(0.3,1);
+    
+escalar(random_range(0.3,1));
+
+alarm[10]=100;
+
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="10">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>750</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>11</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>random(240)</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>if (image_alpha &gt; 0){
+    image_alpha=image_alpha-0.1;
+    draw_self();
+    alarm[10]=20;
+}else{
+    instance_destroy();
+}
+
+</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="11">
+    <event eventtype="7" enumb="5">
       <action>
         <libid>1</libid>
         <id>203</id>
