@@ -45,6 +45,7 @@
         <sprite>sprites\pausa</sprite>
       </sprites>
       <sprite>sprites\Orco</sprite>
+      <sprite>sprites\comida</sprite>
     </sprites>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
@@ -128,6 +129,7 @@
         <object>objects\o_arbol_inicio</object>
         <object>objects\o_arbol1</object>
         <object>objects\o_later</object>
+        <object>objects\o_comida</object>
       </objects>
       <objects name="jugador">
         <object>objects\o_espada</object>

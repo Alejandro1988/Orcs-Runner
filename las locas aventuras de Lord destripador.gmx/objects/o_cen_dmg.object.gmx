@@ -29,8 +29,10 @@
 comportamiento_camino();
 tasaMax=0.8;
 tasa=1.025;
-event_user(0);
-alarm[1]=2;
+aceleracion=0.08;
+event_user(0);//activa destruccion
+event_user(2);//activa aceleracion
+
 </string>
           </argument>
         </arguments>
