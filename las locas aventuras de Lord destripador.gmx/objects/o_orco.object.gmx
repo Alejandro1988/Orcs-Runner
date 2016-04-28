@@ -39,9 +39,61 @@ event_user(2);//activa desvanecimiento
 
 //creacion de comida //en prueba
 
-if ( irandom(100) &lt; 100) {
+if ( irandom(100) &lt; 3 ) {
     alarm[1]=irandom_range(5,20);
 }
+//cambio de carril
+if (irandom(10) &lt; 2 ) {
+    ///cambio de carril
+    if ( x &gt; carrilCentral + 30){
+        dest= carrilCentral;
+    }else{
+        if (x&lt; carrilCentral - 30){
+            dest = carrilCentral;
+        }else{
+            if (irandom(1) = 0){
+                dest=carrilIzq;
+            }else{
+                dest=-carrilDer;
+            }
+        }
+    }
+    alarm[2]=irandom_range(5,20);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///cambio de carril
+if ( x &gt; dest + 10 ){
+    hspeed=-2;
+}else{
+    if ( x &lt; dest - 10) {
+        hspeed=2;
+    }else{
+        hspeed=0;
+    }
+} 
+alarm[2]=5;
 </string>
           </argument>
         </arguments>
