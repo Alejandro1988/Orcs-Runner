@@ -84,6 +84,9 @@
       <script>scripts\scr_checkAccion.gml</script>
       <script>scripts\perida_vida.gml</script>
     </scripts>
+    <scripts name="scripts de editor de nivel">
+      <script>scripts\scr_salvar_nivel.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Orca</font>
@@ -142,6 +145,9 @@
       </objects>
     </objects>
     <object>objects\o_logo</object>
+    <objects name="new">
+      <object>objects\obj_crear_nivel</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">

@@ -653,10 +653,12 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="3">
+    <constants number="5">
       <constant name="carrilCentral">509</constant>
       <constant name="carrilIzq">228</constant>
       <constant name="carrilDer">790</constant>
+      <constant name="cantObstaculos">3</constant>
+      <constant name="maxOleada">5</constant>
     </constants>
   </ConfigConstants>
 </Config>
