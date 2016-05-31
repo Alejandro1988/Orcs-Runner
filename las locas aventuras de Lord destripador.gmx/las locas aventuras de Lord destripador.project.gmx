@@ -87,6 +87,7 @@
     <scripts name="scripts de editor de nivel">
       <script>scripts\scr_salvar_nivel.gml</script>
     </scripts>
+    <script>scripts\vista.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Orca</font>
