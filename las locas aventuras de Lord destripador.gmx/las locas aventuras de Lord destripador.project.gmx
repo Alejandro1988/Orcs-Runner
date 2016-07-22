@@ -149,6 +149,7 @@
     <objects name="new">
       <object>objects\obj_crear_nivel</object>
     </objects>
+    <object>objects\pantallaAdaptable</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">
