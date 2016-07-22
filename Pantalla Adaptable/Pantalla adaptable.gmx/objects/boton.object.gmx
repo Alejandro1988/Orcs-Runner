@@ -8,6 +8,34 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//seteo del area segura
+heightSeguro=view_hview[0];
+widthSeguro=view_wview[0];
+borde=room_width-widthSeguro;
+aspectRatioSeguro=widthSeguro/heightSeguro;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -67,56 +95,70 @@ else {
 /*
   //show_debug_message("centro")
 */
- if (window_get_width() &gt;960){ 
-    widthPort=round(window_get_width());
-    heightPort=round(window_get_height());
-    view_hport=heightPort;
-    view_wport=widthPort;
-    view_visible[0] = true;
-   // view_visible[1] = true;
-    //view_visible[2] = true;
-    view_enabled = true;
+view_visible[0] = true;
+view_enabled = true;
     
-    heightSeguro=640;
-    widthSeguro=1140;
-    borde=round((widthPort - widthSeguro)/2);
-    //area segura
-    view_wport[0]=widthPort;
-    view_hport[0]=heightPort;
-    view_xport[0]=0;
-    view_yport[0]=0;
-
-    view_wview[0]=widthSeguro;
-    view_hview[0]=heightSeguro;
-    view_xview[0]=0;
-    view_yview[0]=0;
-  
-    /*
-    //izquierda
-    view_wport[1]=borde;
-    view_hport[1]=heightPort;
-    view_xport[1]=0;
-    view_yport[1]=0;
+//seteo del Port
+widthPort=round(window_get_width());
+heightPort=round(window_get_height());
+view_hport=heightPort;
+view_wport=widthPort;
+aspectRatioPort=widthPort/heightPort;
     
-    view_wview[1]=borde;
-    view_hview[1]=heightSeguro;
-    view_xview[1]=0;
-    view_yview[1]=0;
-
-    //derecha
-    view_wport[2]=borde;
-    view_hport[2]=heightPort;
-    view_xport[2]=borde+widthSeguro;
-    view_yport[2]=0;
-    
-    view_wview[2]=borde;
-    view_hview[2]=heightSeguro;
-    view_xview[2]=borde+widthSeguro;
-    view_yview[2]=0;
-*/
-    surface_resize(application_surface, widthPort, heightPort);
+//caso pantalla mas ancha
+if (aspectRatioPort&gt;aspectRatioSeguro){
+    //adapto la vista
+    view_wview[0] = view_hview[0] * aspectRatioPort;
+    view_wport = view_wview[0] / aspectRatioPort;
+    surface_resize(application_surface, view_wview[0], view_hview[0]);
+    view_xview[0]=round((room_width-view_wview[0])/2);  
 }
+ 
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>103</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_hspeed</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>-5</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>103</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_hspeed</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>5</string>
           </argument>
         </arguments>
       </action>
