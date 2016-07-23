@@ -15,6 +15,7 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts"/>
   <objects name="objects">
     <object>objects\o32x32</object>
     <object>objects\o64x64</object>
