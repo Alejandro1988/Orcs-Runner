@@ -49,11 +49,9 @@
     </sprites>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
+    <sprite>sprites\s_pausa</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\f_pausa</background>
-    <background>background\f_aux1</background>
-    <background>background\f_aux2</background>
     <background>background\background0</background>
     <background>background\background1</background>
     <background>background\background3</background>
@@ -87,7 +85,6 @@
     <scripts name="scripts de editor de nivel">
       <script>scripts\scr_salvar_nivel.gml</script>
     </scripts>
-    <script>scripts\vista.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Orca</font>
@@ -150,6 +147,7 @@
       <object>objects\obj_crear_nivel</object>
     </objects>
     <object>objects\pantallaAdaptable</object>
+    <object>objects\o_pausa_back</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">

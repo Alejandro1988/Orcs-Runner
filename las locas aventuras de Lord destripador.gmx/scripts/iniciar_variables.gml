@@ -1,3 +1,3 @@
 global.dificultad=390;
 score=0;
-lives=50;
+lives=2;
