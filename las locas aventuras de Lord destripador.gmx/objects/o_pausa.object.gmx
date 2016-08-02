@@ -48,17 +48,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if (paused==true){
-    paused=false;
-    room_goto(nivel1)
-}else{
-    if (!paused){
-        paused=true;
-*/        temporal = sprite_create_from_screen (0,0,window_get_width(),window_get_height(),false,false,0,0);
-        sprite_assign(s_pausa, temporal);
-        room_goto(pause);
- //   }
-//}
+            <string>surf = surface_create(window_get_width(),window_get_height());
+surface_copy(surf, 0, 0, application_surface);
+temporal = sprite_create_from_surface(surf, 0, 0,window_get_width(),window_get_height(), false, false, 0, 0);
+surface_free(surf);
+sprite_assign(s_pausa, temporal);
+room_goto(pause);
+
 </string>
           </argument>
         </arguments>
