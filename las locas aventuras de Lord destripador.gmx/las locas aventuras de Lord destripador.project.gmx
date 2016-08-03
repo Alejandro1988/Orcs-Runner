@@ -19,7 +19,6 @@
       <sprite>sprites\titulo</sprite>
       <sprite>sprites\s_nombre</sprite>
       <sprite>sprites\menu_opciones</sprite>
-      <sprite>sprites\Cartel_pausa</sprite>
       <sprite>sprites\barraLlena</sprite>
       <sprite>sprites\barraVacia</sprite>
     </sprites>
@@ -49,7 +48,12 @@
     </sprites>
     <sprite>sprites\rocaG</sprite>
     <sprite>sprites\espada</sprite>
-    <sprite>sprites\s_pausa</sprite>
+    <sprite>sprites\s_mangual_cadena</sprite>
+    <sprite>sprites\s_mangual_bola</sprite>
+    <sprites name="pausa">
+      <sprite>sprites\s_pausa</sprite>
+      <sprite>sprites\Cartel_pausa</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -113,9 +117,7 @@
         <object>objects\o_volumen</object>
       </objects>
       <object>objects\o_volver</object>
-      <objects name="pausa">
-        <object>objects\o_cartel_pausa</object>
-      </objects>
+      <object>objects\o_logo</object>
     </objects>
     <objects name="Nivel">
       <objects name="esenografia">
@@ -135,6 +137,8 @@
       <objects name="jugador">
         <object>objects\o_espada</object>
         <object>objects\o_personaje</object>
+        <object>objects\o_mangual_base</object>
+        <object>objects\o_mangual_cadena</object>
       </objects>
       <objects name="Botones y iconos">
         <object>objects\o_vidas</object>
@@ -142,12 +146,14 @@
         <object>objects\o_pausa</object>
       </objects>
     </objects>
-    <object>objects\o_logo</object>
     <objects name="new">
       <object>objects\obj_crear_nivel</object>
     </objects>
     <object>objects\pantallaAdaptable</object>
-    <object>objects\o_pausa_back</object>
+    <objects name="pausa">
+      <object>objects\o_pausa_back</object>
+      <object>objects\o_cartel_pausa</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="menu">
